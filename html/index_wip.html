@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen Con Hotels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>    
+      Gen Con Hotel Status
+    </header>
+    <div id="container">
+        <div class="table-stuff">
+    <table id="Gencon-Hotels" border="1">
+        <thead>
+            <tr>
+                <th>Room Name</th>
+                <th>Rate</th>
+                <th>We</th>
+                <th>Th</th>
+                <th>Fr</th>
+                <th>Sa</th>
+                <th>Su</th>
+            </tr>
+        </thead>
+        <tbody id="hotel-data">
+           
+        </tbody>
+    </table>
+    
+    
+    
+</div>
+
+    <div id="TimeStamp">
+        <!-- Timestamp will be populated dynamically by JavaScript -->
+    </div>
+   
+    <script src="script.js"></script>
+        <div class="center">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input name="cmd" type="hidden" value="_donations"/>
+                <input name="business" type="hidden" value="U9W4PB2ZHCSTN"/>
+                <input name="item_name" type="hidden"
+                       value="Beer Money"/>
+                <input name="currency_code" type="hidden" value="USD"/>
+                <input alt="Donate with PayPal button" name="submit"
+                       src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+                       title="PayPal - The safer, easier way to pay online!" type="image"/>
+            </form>
+            <h3>
+                Thank you to all of the <a href="/thankyou.html">DONORS!</a>
+            </h3>
+            Donations go to beer money this year!
+            <br>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
