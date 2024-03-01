@@ -1,127 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gen Con Hotels</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-   
+
     <header class="display-flex justify">
         Gen Con Hotel Status 2024
     </header>
-    
-<div class="main-container">
-    <div class="container display-flex">
-        <div class="column justify">
-            <div class="button-updated">
-                Gencon Hotels Last Update:
-                <div id="TimeStamp" class="TimeStamp">
-                    <!-- Timestamp will be populated dynamically by JavaScript -->
-                </div>
-                <button id="toggle-all" class="toggle-all">Collapse/Expand All</button>
-            </div>
-            <div class="table-stuff display-flex justify">
-           
-                <table id="Gencon-Hotels">
-                    <tbody id="hotel-data">
-                    </tbody>
-                </table>
-            </div>
-        </div>
-        <div class="column-two justify">
-            <div class="alerts-container display-flex justify">
-                <div class="row">
-                    <div class="button display-flex">
-                        <button id="toggle-all" class="toggle-all">Collapse/Expand All</button>
+    <div class="main-container">
+        <div class="container display-flex">
+            <div class="column justify">
+                <div class="button-updated">
+                    Gencon Hotels Last Update:
+                    <div id="TimeStamp" class="TimeStamp">
                     </div>
+                    <button id="toggle-all" class="toggle-all">Collapse/Expand All</button>
                 </div>
-            </div>
-            <div class="alerts-container display-flex justify">
-                <div class="alert-column justify">
-                    <input id="alerts_on" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Enabled">
-                    <label for="alerts_on">Enable Alerts</label>
-                    <br>
-                    <input disabled id="alerts_skywalk" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Disabled">
-                    <label for="alerts_skywalk">On Skywalk</label>
-                    <br>
-                    <input disabled id="alerts_blocks" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Disabled">
-                    <label for="alerts_blocks">On Block(s)</label>
-                </div>
-                <div class="alert-column justify">
-                    <input disabled id="audio_alerts" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Disabled">
-                    <label for="audio_alerts">Audio Alerts</label>
-                    <br>
-                    <input disabled id="audio_quiet" name="audio_alert_type" onchange="handleAudioAlertType(event)" type="radio" value="Disabled">
-                    <label for="audio_quiet">Subtle Alert</label>
-                    <br>
-                    <input disabled id="audio_loud" name="audio_alert_type" onchange="handleAudioAlertType(event)" type="radio" value="Disabled">
-                    <label for="audio_loud">Loud Alert</label>
-                    
-                </div>
-            </div>
-            <!-- Wrap the following row in a parent container -->
-            <div class="alerts-container justify">
-                <div class="row">
-                    <br>
-                    <input disabled id="alert_open_portal" name="open_portal" onchange="alertsEnabled()" type="checkbox" value="Disabled">
-                    <label for="alert_open_portal">Open Portal on Alert</label>
-                    <br>
-                    <label for="alert_open_portal_url">Portal URL:</label>
-                    <br>
-                    <input disabled id="alert_open_portal_url" name="portal_url" onchange="alertPortalUrl()" type="text" value="">
-                    <br>
-                    <div id="alert_open_portal_url_check"></div>
-                    <div id="portal_url_tip" style="display: none;">
-                        Valid Link format:
-                        https://book.passkey.com/entry?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXlsb2FkIjp7ImVudHJ5IjoiUkVHSVNUUkFUSU9OIiwicGFyYW1zIjpbeyJuYW1lIjoiYnJpZGdlSWQiLCJ2YWx1ZSI6IlFST09NU1NVQy1LUzQ0In1dfX0.cptdYWPJGGTzIIhm-PkIoOHOtNIdL7447G4oioNu1Jc
-                    </div>
+                <div class="table-stuff display-flex justify">
 
-                    <div class="wording">
-                        Gencon Hotels Last Update:
-                        <div id="TimeStamp"  class="TimeStamp">
-                            <!-- Timestamp will be populated dynamically by JavaScript -->
+                    <table id="Gencon-Hotels">
+                        <tbody id="hotel-data">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="column-two justify">
+                <div class="alerts-container display-flex justify">
+                    <div class="row">
+                        <div class="button display-flex">
+                            <button id="toggle-all" class="toggle-all">Collapse/Expand All</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="alerts-container display-flex justify">
+                    <div class="alert-column justify">
+                        <input id="alerts_on" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Enabled">
+                        <label for="alerts_on">Enable Alerts</label>
+                        <br>
+                        <input disabled id="alerts_skywalk" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Disabled">
+                        <label for="alerts_skywalk">On Skywalk</label>
+                        <br>
+                        <input disabled id="alerts_blocks" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Disabled">
+                        <label for="alerts_blocks">On Block(s)</label>
+                    </div>
+                    <div class="alert-column justify">
+                        <input disabled id="audio_alerts" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Disabled">
+                        <label for="audio_alerts">Audio Alerts</label>
+                        <br>
+                        <input disabled id="audio_quiet" name="audio_alert_type" onchange="handleAudioAlertType(event)" type="radio" value="Disabled">
+                        <label for="audio_quiet">Subtle Alert</label>
+                        <br>
+                        <input disabled id="audio_loud" name="audio_alert_type" onchange="handleAudioAlertType(event)" type="radio" value="Disabled">
+                        <label for="audio_loud">Loud Alert</label>
+
+                    </div>
+                </div>
+                <div class="alerts-container justify">
+                    <div class="row">
+                        <br>
+                        <input disabled id="alert_open_portal" name="open_portal" onchange="alertsEnabled()" type="checkbox" value="Disabled">
+                        <label for="alert_open_portal">Open Portal on Alert</label>
+                        <br>
+                        <label for="alert_open_portal_url">Portal URL:</label>
+                        <br>
+                        <input disabled id="alert_open_portal_url" name="portal_url" onchange="alertPortalUrl()" type="text" value="">
+                        <br>
+                        <div id="alert_open_portal_url_check"></div>
+                        <div id="portal_url_tip" style="display: none;">
+                            Valid Link format:
+                            https://book.passkey.com/entry?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJwYXlsb2FkIjp7ImVudHJ5IjoiUkVHSVNUUkFUSU9OIiwicGFyYW1zIjpbeyJuYW1lIjoiYnJpZGdlSWQiLCJ2YWx1ZSI6IlFST09NU1NVQy1LUzQ0In1dfX0.cptdYWPJGGTzIIhm-PkIoOHOtNIdL7447G4oioNu1Jc
+                        </div>
+                        <div class="wording">
+                            Gencon Hotels Last Update:
+                            <div id="TimeStamp" class="TimeStamp">
+                                <!-- Timestamp will be populated dynamically by JavaScript -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-
-<div class="footer display-flex justify">
-    <div class="footer-content">
-        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input name="cmd" type="hidden" value="_donations"/>
-            <input name="business" type="hidden" value="U9W4PB2ZHCSTN"/>
-            <input name="item_name" type="hidden" value="Beer Money"/>
-            <input name="currency_code" type="hidden" value="USD"/>
-            <input alt="Donate with PayPal button" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" title="PayPal - The safer, easier way to pay online!" type="image"/>
-        </form>
-    </div>
-    <div class="footer-content">
-      
+    <div class="footer display-flex justify">
+        <div class="footer-content">
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input name="cmd" type="hidden" value="_donations" />
+                <input name="business" type="hidden" value="U9W4PB2ZHCSTN" />
+                <input name="item_name" type="hidden" value="Beer Money" />
+                <input name="currency_code" type="hidden" value="USD" />
+                <input alt="Donate with PayPal button" name="submit" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" title="PayPal - The safer, easier way to pay online!" type="image" />
+            </form>
+        </div>
+        <div class="footer-content">
             Thank you to all of the <a href="/thankyou.html">DONORS!</a>
-        
-        <p>Donations go to beer money this year!</p>
+            <p>Donations go to beer money this year!</p>
+        </div>
     </div>
-</div>
+    </div>
 
-</div>
-
-
-
-
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
-  
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
     <script src="script.js"></script>
-  
-</body>
 
+</body>
 </html>

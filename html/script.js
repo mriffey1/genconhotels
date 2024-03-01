@@ -185,7 +185,6 @@ table.appendChild(thead);
             <td role="cell" colspan="7" class="hotel-name">
                 <div class="hotel-toggle"> <span class="expand-indicator">▼</span>
                     ${group.hotel_name} (${getDistanceUnit(group.distance, group.distance_unit)})
-                    <!-- Add an arrow indicator -->
                 </div>
             </td>
         `;
