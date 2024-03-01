@@ -111,19 +111,20 @@ function createNoDataMessage(table) {
     table.appendChild(tbody);
 }
 function getDistanceUnit(distance, unit) {
-    switch (unit) {
-        case null:
-        case "":
+    switch (true) {
+        case distance === null || distance === "":
+        case unit === null || unit === "":
             return 'Distance Unknown - See Portal';
-        case 0:
+        case unit === 0:
             return 'Skywalk';
-        case 1:
+        case unit === 1:
             return `${distance} Blocks`;
-        case 3:
+        case unit === 3:
             return `${distance} Miles`;
         default:
             return 'Distance Unknown - See Portal';
     }
+    
 }
 
 // Function to build table
