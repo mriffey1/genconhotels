@@ -228,18 +228,20 @@ function isEqual(obj1, obj2) {
 refreshTable();
 document.addEventListener('DOMContentLoaded', function() {
     // Event listener for collapsing/expanding all items
-    const toggleAllButton = document.getElementById('toggle-all');
-    toggleAllButton.addEventListener('click', function() {
-        const detailsRows = document.querySelectorAll('.hotel-details-row');
-        const expandIndicators = document.querySelectorAll('.expand-indicator');
-        const isAnyRowCollapsed = Array.from(detailsRows).some(row => row.style.display === 'none');
-        
-        detailsRows.forEach(row => {
-            row.style.display = isAnyRowCollapsed ? 'table-row' : 'none';
-        });
+    const toggleAllButtons = document.querySelectorAll('.toggle-all');
+    toggleAllButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const detailsRows = document.querySelectorAll('.hotel-details-row');
+            const expandIndicators = document.querySelectorAll('.expand-indicator');
+            const isAnyRowCollapsed = Array.from(detailsRows).some(row => row.style.display === 'none');
+            
+            detailsRows.forEach(row => {
+                row.style.display = isAnyRowCollapsed ? 'table-row' : 'none';
+            });
 
-        expandIndicators.forEach(indicator => {
-            indicator.textContent = isAnyRowCollapsed ? '▼' : '▶';
+            expandIndicators.forEach(indicator => {
+                indicator.textContent = isAnyRowCollapsed ? '▼' : '▶';
+            });
         });
     });
 
@@ -292,16 +294,19 @@ function refreshTimestamp() {
         .then(function (response) {
             if (response !== lastTimestamp) {
                 refreshTable();
-                if (firstrunTable) {
-                    $("#TimeStamp").text(response);
-                } else {
-                    $("#TimeStamp").fadeOut("slow", function () {
-                        $("#TimeStamp").text(response);
-                    });
-                    refreshTable();
-                    $("#TimeStamp").fadeIn("slow");
-                    lastTimestamp = response;
-                }
+                const timeStampElements = document.querySelectorAll(".TimeStamp");
+                timeStampElements.forEach(function (element) {
+                    if (firstrunTable) {
+                        element.textContent = response;
+                    } else {
+                        $(element).fadeOut("slow", function () {
+                            element.textContent = response;
+                        });
+                        refreshTable();
+                        $(element).fadeIn("slow");
+                        lastTimestamp = response;
+                    }
+                });
                 firstrunTable = false;
             }
         });
@@ -309,6 +314,7 @@ function refreshTimestamp() {
 
 refreshTimestamp();
 setInterval(refreshTimestamp, 2000);
+
 
 
 // Function to handle alerts enabling/disabling

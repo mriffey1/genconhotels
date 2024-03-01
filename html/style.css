@@ -45,10 +45,12 @@ a:link, a:visited, a:active {
     display: flex;
     justify-content: center; /* Distribute items evenly along the main axis */
     align-items: center; /* Center items vertically */
+    height:150px;
 }
 .footer-content {
     margin-right: 20px;
     margin-bottom: 10px; /* Adjust spacing between sections */
+  
 }
 
   a:hover {
@@ -231,7 +233,16 @@ thead {
     color: #000000; 
     font-weight: bold;
 }
-@media (max-width: 767px) {
+@media (max-width: 760px) {
+    /* Prevent horizontal scrolling */
+    html, body {
+        overflow-x: hidden;
+    }
+
+    /* Adjust width of elements */
+    .main-container {
+        overflow-x: hidden; /* Prevent horizontal overflow */
+    }
     .container {
         flex-direction: column; /* Change flex direction to stack columns */
     }
