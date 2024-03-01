@@ -10,13 +10,13 @@
 
 <body>
    
-    <header>
+    <header class="display-flex justify">
         Gen Con Hotel Status 2024
     </header>
     
 <div class="main-container">
-    <div class="container">
-        <div class="column">
+    <div class="container display-flex">
+        <div class="column justify">
             <div class="button-updated">
                 Gencon Hotels Last Update:
                 <div id="TimeStamp" class="TimeStamp">
@@ -24,7 +24,7 @@
                 </div>
                 <button id="toggle-all" class="toggle-all">Collapse/Expand All</button>
             </div>
-            <div class="table-stuff">
+            <div class="table-stuff display-flex justify">
            
                 <table id="Gencon-Hotels">
                     <tbody id="hotel-data">
@@ -32,16 +32,16 @@
                 </table>
             </div>
         </div>
-        <div class="column-two">
-            <div class="alerts-container">
+        <div class="column-two justify">
+            <div class="alerts-container display-flex justify">
                 <div class="row">
-                    <div class="button">
+                    <div class="button display-flex">
                         <button id="toggle-all" class="toggle-all">Collapse/Expand All</button>
                     </div>
                 </div>
             </div>
-            <div class="alerts-container">
-                <div class="alert-column">
+            <div class="alerts-container display-flex justify">
+                <div class="alert-column justify">
                     <input id="alerts_on" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Enabled">
                     <label for="alerts_on">Enable Alerts</label>
                     <br>
@@ -51,7 +51,7 @@
                     <input disabled id="alerts_blocks" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Disabled">
                     <label for="alerts_blocks">On Block(s)</label>
                 </div>
-                <div class="alert-column">
+                <div class="alert-column justify">
                     <input disabled id="audio_alerts" name="Alerts On" onchange="alertsEnabled()" type="checkbox" value="Disabled">
                     <label for="audio_alerts">Audio Alerts</label>
                     <br>
@@ -64,7 +64,7 @@
                 </div>
             </div>
             <!-- Wrap the following row in a parent container -->
-            <div class="alerts-container">
+            <div class="alerts-container justify">
                 <div class="row">
                     <br>
                     <input disabled id="alert_open_portal" name="open_portal" onchange="alertsEnabled()" type="checkbox" value="Disabled">
@@ -92,7 +92,7 @@
     </div>
 </div>
 
-<div class="footer">
+<div class="footer display-flex justify">
     <div class="footer-content">
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input name="cmd" type="hidden" value="_donations"/>

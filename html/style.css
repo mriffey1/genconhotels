@@ -1,109 +1,99 @@
 
-
-title {
-    text-align: center;
-}
-html, body {
-    height: 100%;
-    margin: 0;
-}
+html,
 body {
-    background-color: #2D2A26;
-    color: #ffffff;
-    margin: 0 auto;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size:1em;
+  height: 100%;
+  margin: 0;
+  background-color: #2D2A26;
+  color: #ffffff;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
 }
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+.display-flex {
+  display: flex;
 }
+
+.justify {
+  justify-content: center;
+  align-items: center;
+}
+
 .hotel-details-row {
-    background-color: #afafaf; 
-    color:#000000
+  background-color: #afafaf;
+  color: #000000
 }
 
 .detail-group {
-    background-color: rgb(61, 61, 61); 
-    color:#ffffff;
+  background-color: rgb(61, 61, 61);
+  color: #ffffff;
 }
 
 .no-data {
-    background-color: #afafaf; 
-    color:#000000;
-    height: 50px;
-    text-align: center;
-    font-weight:bold;
-    font-size: 1em;
+  background-color: #afafaf;
+  color: #000000;
+  height: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1em;
 }
-a:link, a:visited, a:active {
-    color: rgb(255, 255, 255);
-  }
 
-  .footer {
-    display: flex;
-    justify-content: center; /* Distribute items evenly along the main axis */
-    align-items: center; /* Center items vertically */
-    height:150px;
+a:link,
+a:visited,
+a:active {
+  color: rgb(255, 255, 255);
 }
+
+.footer {
+  height: 150px;
+}
+
 .footer-content {
-    margin-right: 20px;
-    margin-bottom: 10px; /* Adjust spacing between sections */
-  
+  margin-right: 20px;
+  margin-bottom: 10px;
 }
 
-  a:hover {
-    color: hotpink;
-  }
+a:hover {
+  color: hotpink;
+}
+
 #portal_url_tip {
-    white-space: normal;
-    width:70%;
-    word-wrap: break-word
+  white-space: normal;
+  width: 70%;
+  word-wrap: break-word
 }
+
 .main-container {
-    flex: 1;
+  display: flex;
 }
+
 .container {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    
+  width: 100%;
+  justify-content: center;
 }
+
 .alerts-container {
-    display: flex;
-    width:100%; 
-    justify-content: center;
-    align-items: center;
+  width: 100%;
 }
+
 .column {
-   
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-   
+  padding: 10px;
 }
+
 .column-two {
-    width:30%;
-    padding: 10px;
-    justify-content: center;
-    align-items: center; 
-    
- 
+  width: 30%;
+  padding: 10px;
 }
 
 .alert-column {
-    width:100%;
-    justify-content: center;
-    align-items: center;  
+  width: 100%;
 }
 
 .row {
-    flex: 1;
-    width: 100%;
-    justify-content: left;
-    align-items: left;   
-    
+  flex: 1;
+  width: 100%;
+  justify-content: left;
+  align-items: left;
 }
 
 *,
@@ -113,99 +103,101 @@ a:link, a:visited, a:active {
 }
 
 .wording {
-    margin-top: 15px;
-    font-weight:bold;
-    
+  margin-top: 15px;
+  font-weight: bold;
 }
 
 #TimeStamp {
-    color: #F1AD34;
+  color: #F1AD34;
 }
+
 table {
-    color:#000;
-    border: none;
+  color: #000;
+  border: none;
 }
-tbody + tbody::before {
-	content: "";
-	height: 10px;
-    border: none;
-	display: table-row;
 
+tbody+tbody::before {
+  content: "";
+  height: 10px;
+  border: none;
+  display: table-row;
 }
-.table-stuff {
-    display:flex;
-    justify-content: center;
-}
+
 .button {
-    display:flex;
-    justify-content: left;
-    padding-bottom:15px;
-}
-button {
-    background-color: #1f5b9a; 
-    border: none;
-    color: rgb(255, 255, 255);
-    padding: 10px 25px;
-    border-radius: 4px;
-    text-align: center;
-    font-weight:bold;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1em;
-  }
-.unavailable {
-    background-color: #989898;
-}
-th, td {
-    padding: 7px;
-    border: none;
+  justify-content: left;
+  padding-bottom: 15px;
 }
 
-th {border: none;
-    font-weight:bold;
-    
+button {
+  background-color: #1f5b9a;
+  border: none;
+  color: rgb(255, 255, 255);
+  padding: 10px 25px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1em;
 }
-tr {border: none;
-    height:30px;
-  
+
+.unavailable {
+  background-color: #989898;
+}
+
+th,
+td {
+  padding: 7px;
+  border: none;
+}
+
+th {
+  border: none;
+  font-weight: bold;
+}
+
+tr {
+  border: none;
+  height: 30px;
 }
 
 header {
-  display: flex;
-  align-items: center;
   color: #000;
   flex-wrap: wrap;
-  justify-content: center;
   font-size: 2.25em;
-  font-weight:bold;
+  font-weight: bold;
   word-wrap: break-word;
   background-color: #ffffff;
-  padding: 17px; 
+  padding: 17px;
   height: 50px;
- 
 }
+
 .expand-indicator {
-    float: left; 
+  float: left;
 }
+
 .hotels {
-    padding-top: 15px;
+  padding-top: 15px;
 }
+
 #Gencon-Hotels {
-    width: 850px; 
+  width: 850px;
 }
-    
+
 div.center {
-    text-align: center;
+  text-align: center;
 }
 
 #Gencon-Hotels th:nth-child(1),
 #Gencon-Hotels td:nth-child(1) {
-    width: 40%; 
+  width: 40%;
 }
+
 #Gencon-Hotels th:nth-child(2),
 #Gencon-Hotels td:nth-child(2) {
-    width: 12%; 
+  width: 12%;
 }
+
 #Gencon-Hotels th:nth-child(3),
 #Gencon-Hotels th:nth-child(4),
 #Gencon-Hotels th:nth-child(5),
@@ -216,136 +208,167 @@ div.center {
 #Gencon-Hotels td:nth-child(5),
 #Gencon-Hotels td:nth-child(6),
 #Gencon-Hotels td:nth-child(7) {
-    width: 8%; 
+  width: 8%;
 }
 
 thead {
-    text-align:left;
-    background-color: #F1AD34;
-    color: #000000;
+  text-align: left;
+  background-color: #F1AD34;
+  color: #000000;
 }
 
 .button-updated {
-    display: none;
+  display: none;
 }
+
 .hotel-name {
-    background-color: #ffffff; 
-    color: #000000; 
-    font-weight: bold;
+  background-color: #ffffff;
+  color: #000000;
+  font-weight: bold;
+}
+
+.skywalk-background {
+  background-color: #306FF6; /* Specify the background color for Skywalk rows */
+  color: #fff;
+  
+}
+
+.block-background {
+  background-color: #CE0F2D;
+  color: #fff;
 }
 @media (max-width: 760px) {
-    /* Prevent horizontal scrolling */
-    html, body {
-        overflow-x: hidden;
-    }
 
-    /* Adjust width of elements */
-    .main-container {
-        overflow-x: hidden; /* Prevent horizontal overflow */
-    }
-    .container {
-        flex-direction: column; /* Change flex direction to stack columns */
-    }
-    .button-updated {
-        display: contents;
-    }
-    .column-two {
-        width: 100%; /* Take full width */
-    }
+  /* Prevent horizontal scrolling */
+  html,
+  body {
+    overflow-x: hidden;
+  }
 
-    .alerts-container {
-        flex-direction: column; /* Stack items vertically */
-    }
+  /* Adjust width of elements */
+  .main-container {
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+  }
 
-    .row {
-        margin-top: 15px; /* Add margin to create space between the table and the content */
-    }
+  .container {
+    flex-direction: column;
+    /* Change flex direction to stack columns */
+  }
 
-    .footer {
-        flex-direction: column; /* Stack footer content vertically */
-        align-items: center; /* Align items to center */
-    }
-    #Gencon-Hotels thead {
-        display: none;
-    }
-    #Gencon-Hotels td:nth-child(1) {
-        text-align: left;
-        width: 100%; 
-    }
-    header {
-        padding: 10px; 
-        height: auto; 
-        word-wrap: break-word; 
-    }
-    #Gencon-Hotels th:nth-child(2),
-    #Gencon-Hotels td:nth-child(2) {
-        width: 100%; 
-        text-align: left;
-    }
-    #Gencon-Hotels th:nth-child(3),
-    #Gencon-Hotels th:nth-child(4),
-    #Gencon-Hotels th:nth-child(5),
-    #Gencon-Hotels th:nth-child(6),
-    #Gencon-Hotels th:nth-child(7),
-    #Gencon-Hotels td:nth-child(3),
-    #Gencon-Hotels td:nth-child(4),
-    #Gencon-Hotels td:nth-child(5),
-    #Gencon-Hotels td:nth-child(6),
-    #Gencon-Hotels td:nth-child(7) {
-        text-align: left;
-        width: 100%; 
-    }
-   
-    tbody + tbody::before {
-        display: table-row;
-        height: 20px;
-        margin:0;
-    }
+  .button-updated {
+    display: contents;
+  }
 
- 
- 
-    td.hotel-name {
-        width: 100%; 
-        text-align: left; 
-        font-weight: bold;
-       
-        display: table-cell; 
-    }
-    .wording {
-        display: none;
-    }
-    
-    table tbody tr td {
-        display: block;
-        width: 100%; 
-    }
+  .column-two {
+    width: 100%;
+    /* Take full width */
+  }
+
+  .alerts-container {
+    flex-direction: column;
+    /* Stack items vertically */
+  }
+
+  .row {
+    margin-top: 15px;
+    /* Add margin to create space between the table and the content */
+  }
+
+  .footer {
+    flex-direction: column;
+    /* Stack footer content vertically */
+    align-items: center;
+    /* Align items to center */
+  }
+
+  #Gencon-Hotels thead {
+    display: none;
+  }
+
+  #Gencon-Hotels td:nth-child(1) {
+    text-align: left;
+    width: 100%;
+  }
+
+  header {
+    padding: 10px;
+    height: auto;
+    word-wrap: break-word;
+  }
+
+  #Gencon-Hotels th:nth-child(2),
+  #Gencon-Hotels td:nth-child(2) {
+    width: 100%;
+    text-align: left;
+  }
+
+  #Gencon-Hotels th:nth-child(3),
+  #Gencon-Hotels th:nth-child(4),
+  #Gencon-Hotels th:nth-child(5),
+  #Gencon-Hotels th:nth-child(6),
+  #Gencon-Hotels th:nth-child(7),
+  #Gencon-Hotels td:nth-child(3),
+  #Gencon-Hotels td:nth-child(4),
+  #Gencon-Hotels td:nth-child(5),
+  #Gencon-Hotels td:nth-child(6),
+  #Gencon-Hotels td:nth-child(7) {
+    text-align: left;
+    width: 100%;
+  }
+
+  tbody+tbody::before {
+    display: table-row;
+    height: 20px;
+    margin: 0;
+  }
 
 
-    table tbody tr td::before {
-        content: attr(data-label);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-        width: 50%; 
-        box-sizing: border-box; 
-        padding-right: 5px; 
-    }
 
-    
-    table tbody tr td:not(:first-child) {
-        float: right; 
-        text-align: left; 
-        width: 50%; 
-        box-sizing: border-box; 
-        padding-left: 5px; 
-    }
-    table tbody tr td:first-child {
-        float: right; 
-        text-align: left; 
-        width: 50%; 
-        box-sizing: border-box; 
-        padding-left: 5px; 
-    }
+  td.hotel-name {
+    width: 100%;
+    text-align: left;
+    font-weight: bold;
+
+    display: table-cell;
+  }
+
+  .wording {
+    display: none;
+  }
+
+  table tbody tr td {
+    display: block;
+    width: 100%;
+  }
+
+
+  table tbody tr td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 50%;
+    box-sizing: border-box;
+    padding-right: 5px;
+  }
+
+
+  table tbody tr td:not(:first-child) {
+    float: right;
+    text-align: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 5px;
+  }
+
+  table tbody tr td:first-child {
+    float: right;
+    text-align: left;
+    width: 50%;
+    box-sizing: border-box;
+    padding-left: 5px;
+  }
 
 
 }
